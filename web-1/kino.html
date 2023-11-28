@@ -1,26 +1,51 @@
 <head>
-<style>
-body{
-    background-color:whitesmoke;
-} 
-.kino{
-    margin-left:60px;
-    margin-right: 60px;
-    background-color:white;
-}
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
 
-</style>  
+        .kino {
+            background-color: white;
+            width: 100%;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .container {
+            margin-left: 40%;
+            margin-right: 60%;
+            width: 220px;
+
+        }
+
+        .title {
+           text-align: left;
+           
+        }
+
+        .row {
+            padding-bottom: 10px;
+        }
+    </style>
 </head>
 
-
 <body>
-    <div>Your name:</div>
-    <input style="height:25px" type="text"  />
-    <div>Your Email:</div>
-    <input style="height:25px" type="email" />
-    <div>Movie Title:</div>
-    <input style="height:25px" type="text" />
-    <div>Comments</div>
-    <input style="height:40px"type="text" />
-    
+    <div style="text-align: center;" class="container">
+        <div class="row">
+            <div class="title">Your name:</div>
+            <input class="kino" style="height:25px" type="text" />
+        </div>
+        <div class="row">
+            <div class="title">Your Email:</div>
+            <input class="kino" style="height:25px " type="email" />
+        </div>
+        <div class="row">
+            <div class="title">Movie Title:</div>
+            <input class="kino" style="height:25px" type="text" />
+        </div>
+
+        <div class="title">Comments:</div>
+        <textarea cols="50" rows="5" class="kino"></textarea>
+
+
 </body>
