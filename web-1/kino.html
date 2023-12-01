@@ -1,13 +1,13 @@
 <head>
     <style>
         body {
-            background-color: whitesmoke;
+            background-color: rgb(230, 230, 230);
         }
 
         .kino {
             background-color: white;
             width: 100%;
-            border: 2px solid black;
+            border: 1px solid black;
             display: inline-block;
         }
 
@@ -25,27 +25,47 @@
 
         .row {
             padding-bottom: 10px;
+            text-align: left;
+        }
+        .sub{
+            background-color: black;
+            color:white;
+        }
+        .all{
+            margin-right: 380px; ;
         }
     </style>
 </head>
 
 <body>
+    <div style="background-color: rgb(66, 66, 66); color:white;text-align: center; height:80px;padding:15px ;">
+        <h1>Movie Chart</h1>
+        
+    </div>
+  <div style="background-color: white; width: 25%; height: 40%; margin:auto;margin:top 20px">
+  <div class="all">
     <div style="text-align: center;" class="container">
         <div class="row">
             <div class="title">Your name:</div>
-            <input class="kino" style="height:25px" type="text" />
+            <input class="kino" style="height:30px;width:380px" type="text" />
         </div>
         <div class="row">
             <div class="title">Your Email:</div>
-            <input class="kino" style="height:25px " type="email" />
+            <input class="kino" style="height:30px;width:380px " type="email" />
         </div>
         <div class="row">
             <div class="title">Movie Title:</div>
-            <input class="kino" style="height:25px" type="text" />
+            <input class="kino" style="height:30px;width:380px"  type="text" />
         </div>
-
+        <div class="row">
         <div class="title">Comments:</div>
-        <textarea cols="50" rows="5" class="kino"></textarea>
-
+        <input class="kino" style="height:60px;width:380px" type="text">
+    </div>
+    <div class="row">
+    <div><button  class="title sub" style=" margin-left: 2px; background-color: black; color: white;" type="button">Submit Review</button></div>
+    
+</div>
+</div>
+</div>
 
 </body>
