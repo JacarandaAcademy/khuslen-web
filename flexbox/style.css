@@ -1,0 +1,43 @@
+.flex-container{
+    height:500px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.flex-container > div{
+    
+    padding: 20px;
+    margin: 10px;
+    height:20px;
+    width:20px;
+    background-color: cadetblue;
+    border: 1px solid black;
+    animation: colorchange 5s infinite;
+}
+
+@keyframes colorchange {
+    0% {
+        background-color: chartreuse;
+    }
+    25% {
+        background-color: chocolate;
+    }
+    50%{
+        background-color: blue;
+    }
+    75%{
+        background-color:red;
+    }
+    100%{
+        background-color: gold;
+    }
+}
+
+
+
+
+
+
