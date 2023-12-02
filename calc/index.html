@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input id="number"></td>
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber(7)">7</button></td>
+            <td><button onclick="pressNumber(8)">8</button></td>
+            <td><button onclick="pressNumber(9)">9</button></td>
+            <td><button>*</button></td>
+
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber(4)">4</button></td>
+            <td><button onclick="pressNumber(5)">5</button></td>
+            <td><button onclick="pressNumber(6)">6</button></td>
+            <td><button>-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber(1)">1</button></td>
+            <td><button onclick="pressNumber(2)">2</button></td>
+            <td><button onclick="pressNumber(3)">3</button></td>
+            <td><button onclick="pressOper('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="pressNumber(0)">0</button></td>
+            <td><button onclick="pressNumber('.')">.</button></td>
+            <td><button>/</button></td>
+            <td><button onclick="pressOper('=')">=</button></td>
+        </tr>
+
+    </table>
+    <script>
+        var operation;
+        var memory;
+        
+        function pressOper(oper) {
+            
+            if(oper === '='){
+                let lastValue = document.getElementById("number").value;
+                switch(operation){
+                    case '+':
+                        const sum = parseFloat(memory)+parseFloat(lastValue);
+                        document.getElementById("number").value=sum;
+                        memory = underfined;
+                        operation = undefined;
+                        return;
+                }
+            }
+            operation = oper;
+        }
+
+        function pressNumber(num) {
+            let value = document.getElementById("number").value;
+            if (operation != undefined && memory == undefined) {
+                memory = value;
+                value = "";
+            }
+
+
+            if (num === '.') {
+                const res = value.indexOf('.');
+                if (res > -1) {
+                    return;
+                }
+            }
+            document.getElementById("number").value = value + num;
+
+        }
+    </script>
+</body>
+
+</html>

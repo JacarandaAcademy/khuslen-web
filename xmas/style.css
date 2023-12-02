@@ -5,7 +5,7 @@ body{
 
 .container{
     min-height: 100vh;
-    background:url(https://th.bing.com/th/id/OIP.hWls8szka-EhpbtEq2q0RgHaE7?w=238&h=180&c=7&r=0&o=5&pid=1.7) no-repeat center;
+    
     background-size: cover;
     display:flex;
     position:relative;

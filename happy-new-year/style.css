@@ -22,8 +22,8 @@ body{
     font-size: 4em;
 }
 .text p{
-    color: greenyellow;
-    font-weight: bold;
+    color: red;
+    font-weight: ;
 }
 
 @keyframes snowfall1{
