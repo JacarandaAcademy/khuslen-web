@@ -73,8 +73,25 @@
                 }
             }
             document.getElementById("number").value = value + num;
-
+            
+            
+            function pressOper(oper) {
+            
+            if(oper === '='){
+                let lastValue = document.getElementById("number").value;
+                switch(operation){
+                    case '*':
+                        const sum2= parseFloat(memory)*parseFloat(lastValue);
+                        document.getElementById("number").value=sum;
+                        memory = underfined;
+                        operation = undefined;
+                        return;
+                }
+            }
+            operation = oper;
         }
+
+        
     </script>
 </body>
 
