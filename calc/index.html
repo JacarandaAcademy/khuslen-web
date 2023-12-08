@@ -3,10 +3,21 @@
 
 <head>
     <title>Calculator</title>
+    <style>
+        table{
+            background-image: url("https://th.bing.com/th/id/R.da88fe64b997bd9f92463f7bd783db9b?rik=oU3JFHMOb%2biOqQ&pid=ImgRaw&r=0");
+            background-size: cover;
+        }
+        button{
+            width: 40px;
+            height: 40px;
 
+        }
+    </style>
 </head>
 
 <body>
+    <div style="margin:auto">
     <table>
         <tr>
             <td colspan="4"><input id="number"></td>
@@ -15,14 +26,14 @@
             <td><button onclick="pressNumber(7)">7</button></td>
             <td><button onclick="pressNumber(8)">8</button></td>
             <td><button onclick="pressNumber(9)">9</button></td>
-            <td><button>*</button></td>
+            <td><button onclick="pressOper('*')">*</button></td>
 
         </tr>
         <tr>
             <td><button onclick="pressNumber(4)">4</button></td>
             <td><button onclick="pressNumber(5)">5</button></td>
             <td><button onclick="pressNumber(6)">6</button></td>
-            <td><button>-</button></td>
+            <td><button onclick="pressOper('-')">-</button></td>
         </tr>
         <tr>
             <td><button onclick="pressNumber(1)">1</button></td>
@@ -33,11 +44,12 @@
         <tr>
             <td><button onclick="pressNumber(0)">0</button></td>
             <td><button onclick="pressNumber('.')">.</button></td>
-            <td><button>/</button></td>
+            <td><button onclick="pressOper('/')">/</button></td>
             <td><button onclick="pressOper('=')">=</button></td>
         </tr>
 
     </table>
+</div>
     <script>
         var operation;
         var memory;
@@ -53,10 +65,30 @@
                         memory = underfined;
                         operation = undefined;
                         return;
+    
+                    case '*':
+                        const sum2= parseFloat(memory)*parseFloat(lastValue);
+                        document.getElementById("number").value=sum2;
+                        memory = underfined;
+                        operation = undefined;
+                        return;
+                    case '-':
+                        const sum3= parseFloat(memory)-parseFloat(lastValue);
+                        document.getElementById("number").value=sum3;
+                        memory = underfined;
+                        operation = undefined;
+                        return;
+                    case '/':
+                        const sum4= parseFloat(memory)/parseFloat(lastValue);
+                        document.getElementById("number").value=sum4;
+                        memory = underfined;
+                        operation = undefined;
+                        return;
                 }
             }
             operation = oper;
         }
+            
 
         function pressNumber(num) {
             let value = document.getElementById("number").value;
@@ -77,22 +109,12 @@
             
             function pressOper(oper) {
             
-            if(oper === '='){
-                let lastValue = document.getElementById("number").value;
-                switch(operation){
-                    case '*':
-                        const sum2= parseFloat(memory)*parseFloat(lastValue);
-                        document.getElementById("number").value=sum;
-                        memory = underfined;
-                        operation = undefined;
-                        return;
-                }
             }
-            operation = oper;
         }
 
-        
     </script>
 </body>
 
 </html>
+      
+       
