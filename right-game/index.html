@@ -4,15 +4,55 @@
         <title>Right Game</title>
         <script src="game.js" defer></script>
         <style>
-            button{
+           .button{
                 width:50px;
-                height:50px
+                height:50px;
+                background-color: white;
+                border:1px solid grey;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .fa-circle{
+                color: beige;
+            }
+            .fa-skull-crossbones{
+                color:brown
+            }
+            .fa-face-laugh-squint {
+                color: greenyellow
+            }
+            body{
+                margin:0;
+                padding:0;
+            }
+            .main{
+                background-color: darkcyan;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+            }
+            #message{
+                background-color: beige;
+                margin-top: 10px;
+                width: 250px;
+                height:40px;
+                margin: 5px;
+                padding: 10px;
+                border: 2px dashed grey;
+
             }
         </style>
+        <script src="https://kit.fontawesome.com/25e02b297b.js" crossorigin="anonymous"></script>
+
     </head>
     <body>
-        <div id="container">
-
+    <div class="main">
+        <div id="container">          
         </div>
+        <div id="message"></div>
+    </div>
     </body>
 </html>
