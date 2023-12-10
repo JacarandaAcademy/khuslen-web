@@ -99,6 +99,10 @@ function getPlane() {
 let htmlCode = "";
 let rowNumber = 0;
 getPlane();
+htmlCode = `<div style="display:inline-block">
+<div>1</div>
+<div>2</div>
+</div>`;
 for (const row of plane) {
     let colNumber = 0;
     let html = "";
@@ -114,8 +118,9 @@ for (const row of plane) {
 
 const container = document.getElementById("container");
 container.innerHTML = htmlCode;
-// const failure = new Audio("x.mp3");
-// const success = new Audio("o.mp3");
+const failure = new Audio("splash.mp3");
+const success = new Audio("destroy.mp3");
+const hit = new Audio("bullet.mp3");
 
 function check(id, value) {
     const btn = document.getElementById(id);
@@ -129,20 +134,21 @@ function check(id, value) {
             life--;
             m.innerText = `You have ${life} lives`;
 
-            // failure.play();
+            failure.play();
             break;
         }
         case "C": {
             btn.innerHTML = '<i class="fa fa-dot-circle-o" ></i>';
             life--;
             m.innerText = `You have ${life} lives`;
+            hit.play();
             break;
         }
         case "O": {
             btn.innerHTML = '<i class="fa-solid fa-skull-crossbones"></i>';
             m.innerText = `You win :)`;
             isWin = true;
-            // success.play();
+            success.play();
         }
     }
     if (life === 0) {
